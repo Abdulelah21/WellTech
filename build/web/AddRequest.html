@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html dir="ltr">
+    
+    <head>
+        <meta charset="utf-8">  
+        <title>Books</title>
+        <meta name="description" content="An interactive getting started guide for Brackets.">
+        <link rel="stylesheet" href="css/style.css">
+        <script src="js/Site.js"></script>
+    </head>
+    <body>
+        <header>
+        <div class="container">
+            <a href="index.html" id="logo">
+                <img src="images/logo.png">
+                
+            </a>
+            <nav id="navbar">
+                <ul>
+                    <li >
+                        <a href="index.html">Home</a>
+                        </li>
+                        <li class="current">
+                        <a href="AddRequest.html">Add New Repair Request</a>
+                        
+                        </li>
+                        <li>
+                        <a href="BrowseRecords.html">Browse All Repair Records</a>
+                        
+                        </li>
+                        <li >
+                        <a href="feedback.html">Feedback</a>
+                        
+                        </li>
+                
+                </ul>
+                
+            </nav>
+            
+            
+            </div>
+        </header>
+        <div id="addReq">
+            <div class="container">
+                <h1>Add New Repair Request</h1>
+                <form id="AddRequest" action="#" method="POST" onsubmit="return validateAddRequest();">
+                    <div class="container">
+                        
+                        <label>Computer Owner: </label>
+                        <span class="error" id="errName"> </span>
+                        <br/>
+                        <input type="text" id="fname" name="name" placeholder="Your name...">
+                        <br/>
+                        <br/>
+                        <label>Computer Serial Number: </label>
+                        <span class="error" id="errCoputerSerialNumber"> </span>
+                        <br/>
+                        <input type="text" id="ComputerNumber" name="ComputerNumber" placeholder="The Serial Number...">
+                        <br/>
+                        <br/>
+                        
+                        <label>Type: </label>
+                        <span class="error" id="errType"> </span>
+                        <br/>
+                        <select name="typeOfDevice" id="typeOfDevice">
+                            <br/>
+                            <option> Please select your device... </option>
+                            <option value="desktop">Desktop</option>
+                            <option value="laptop">Labtop</option>
+                            <option value="tablet">Tablet</option>
+                           
+                            
+                        </select>
+                        <br/>
+                        <br/>
+                        <label>Memory GB: </label>
+                        <span class="error" id="errMemoryGB"> </span>
+                        <br/>                     <!--here i change the id for the subject becouse the js code is not work  with multblu object with same id -->
+                        <select name="memoryList" id="memoryList">
+                            
+                            <option> Please select your Memory GB... </option>
+                            <option value="fiveGB">5 GB</option>
+                            <option value="SextinGB">16 GB</option>
+                            <option value="thertytwoGB">32 GB</option>
+                           
+                            
+                        </select>
+                        <br/>
+                        <br/>
+                        <label>HardDisk GB: </label>
+                        <span class="error" id="errHardDiskGB"> </span>
+                        <br/>
+                        <select name="hardDiskList" id="hardDiskList">
+                            
+                            <option> Please select your HardDisk GB... </option>
+                            <option value="fiveGB">5 GB</option>
+                            <option value="SextinGB">16 GB</option>
+                            <option value="thertytwoGB">32 GB</option>
+                           
+                            
+                        </select>
+
+                        <br/>
+                        <br/>
+
+                        
+                        
+                        
+                        <label>Problems: </label>
+                        <span class="error" id="errProblems"> </span>
+                        <br/>
+                        <textarea id="problemstxt" name="msg" placeholder="Write something.." style="height:200px"></textarea>
+                        <br/>
+                        <br/>
+                        <label>Repair Cost: </label>
+                        
+                        <br/>
+                        <input type="text" id="phone" name="number" placeholder="Repair Cost...">
+                        <br/>
+                        <br/>
+                        <label>Repair Status: </label>
+
+                        <br/>
+                        <input type="text" id="phone" name="number" placeholder="Repair Status...">
+                        <br/>
+                        <br/>
+                        <label>Repair Finish DateTime: </label>
+
+                        <br/>
+                        <input type="text" id="phone" name="number" placeholder="Repair Finish DateTime...">
+                        <br>
+                        <br/>
+                        <label>Repair Delivery Date Time: </label>
+                        
+                        <br/>
+                        <input type="text" id="phone" name="number" placeholder="Repair Delivery Date Time...">
+                        
+                        
+                        <br/>
+                        <br/>
+                        <br/>
+                        <input id="submit" type="submit" value="Submit">
+                        
+                        
+                        
+                     
+                    </form>  
+            </div>
+        </div>
+        
+        
+        <footer>
+            <div class="container">
+            
+            <p>Coded by Abed and Abdulelah with love</p>
+            <p>All rights reserved &copy;</p>
+             
+            </div>
+        </footer>
+        
+        
+    </body>
+</html>
+

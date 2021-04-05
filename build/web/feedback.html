@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html dir="ltr">
+    
+    <head>
+        <meta charset="utf-8">  
+        <title>Feedback</title>
+        <meta name="description" content="An online book store">
+        <link rel="stylesheet" href="css/style.css">
+        <script src="js/Site.js"></script>
+    </head>
+    <body>
+        <header>
+        <div class="container">
+            <a href="index.html" id="logo">
+                <img src="images/logo.png">
+                
+            </a>
+            <nav id="navbar">
+                <ul>
+                    <li>
+                        <a href="index.html">Home</a>
+                        </li>
+                        <li>
+                        <a href="AddRequest.html">Add New Repair Request</a>
+                        
+                        </li>
+                        <li >
+                        <a href="BrowseRecords.html">Browse All Repair Records</a>
+                        
+                        </li>
+                        <li class="current">
+                        <a href="feedback.html">Feedback</a>
+                        
+                        </li>
+                
+                </ul>
+                
+            </nav>
+            
+            
+            </div>
+        </header>
+        <form id="helpbox" action="#" method="POST" onsubmit=" return validateHelpbox()">
+            <div class="container">
+                
+                <label>Name: </label>
+                <span class="error" id="errName"> </span>
+                <br/>
+                <input type="text" id="fname" name="name" placeholder="Your name...">
+                <br/>
+                <label>Country: </label>
+                <span class="error" id="errCountry"> </span>
+                <br/>
+                <input type="text" id="Country" name="name" placeholder="Your country...">
+                <br/>
+                <label>Email: </label>
+                <span class="error" id="errEmail"> </span>
+                <br/>
+                <input type="text" id="email" name="email" placeholder="Your email...">
+                <br/>
+                <label>Phone number: </label>
+                <span class="error" id="errPhone"> </span>
+                <br/>
+                <input type="text" id="phone" name="number" placeholder="Your phone number...">
+                <br/>
+                <label>Subject: </label>
+                <span class="error" id="errSubject"> </span>
+                <br/>
+                <input type="text" id="Subjectfeedback" name="number" placeholder="Your subject...">
+                <br/>
+                <label>Type: </label>
+                <span class="error" id="errType"> </span>
+                <br/>
+                <select name="subject" id="subject">
+                    
+                    <option> Please select the Type... </option>
+                    <option value="idea">Idea</option>
+                    <option value="problem">Problem</option>
+                    <option value="help">help</option>
+                    <option value="other">Other</option>
+                    
+
+                </select>
+                <br/>
+                <br/>
+                
+                
+                <label>Message: </label>
+                <span class="error" id="errMessage"> </span>
+                <br/>
+                <textarea id="msg" name="msg" placeholder="Write something.." style="height:200px"></textarea>
+                <br/>
+                <br/>
+                <br/>
+                <input id="submit" type="submit" value="Submit">
+                
+                </div>
+                
+                
+             
+            </form>
+        
+        
+        
+        
+        
+        
+        <footer>
+            <div class="container">
+            
+            <p>Coded by Abed and Abdulelah with love</p>
+            <p>All rights reserved &copy;</p>
+             
+            </div>
+        </footer>
+        
+        
+    </body>
+</html>
