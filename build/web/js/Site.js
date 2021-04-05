@@ -81,7 +81,7 @@ function validateHelpbox() {
         document.getElementById("errName").style.display = "none";
     }
     //Validate the Country field
-    if (document.getElementById("Country").value.search(/^[A-Za-z'\-\._ ]{6,}$/) != 0) {
+    if (document.getElementById("Country").value == "Please select your Country...") {
         valid = false;
         document.getElementById("errCountry").innerHTML = "ERROR: Enter your country please!!";
         document.getElementById("errCountry").style.display = "inline";
@@ -113,7 +113,7 @@ function validateHelpbox() {
     //Validate the  field
     if (document.getElementById("Subjectfeedback").value.search(/^[A-Za-z'\-\._ ]{6,}$/) != 0) {
         valid = false;
-        document.getElementById("errSubject").innerHTML = "ERROR: Enter your country please!!";
+        document.getElementById("errSubject").innerHTML = "ERROR: Enter your subject please!!";
         document.getElementById("errSubject").style.display = "inline";
     } else {
         document.getElementById("errSubject").innerHTML = "";
