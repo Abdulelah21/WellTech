@@ -17,7 +17,7 @@ function validateAddRequest() {
     if (document.getElementById("ComputerNumber").value.search(/^[A-Za-z'\-\._ ]{4,}$/) != 0)        //e.g.  0512345678  or   966512345678
     {
         valid = false;
-        document.getElementById("errCoputerSerialNumber").innerHTML = "ERROR: Computer Serial Number is wrong it must be  digit and 4 letter (SDN89309xxxx) !";
+        document.getElementById("errCoputerSerialNumber").innerHTML = "ERROR: Computer Serial Number is wrong it must be  digit and 4 letter (SDXX) !";
         document.getElementById("errCoputerSerialNumber").style.display = "inline";
     }
     else {
@@ -32,6 +32,15 @@ function validateAddRequest() {
     } else {
         document.getElementById("errType").innerHTML = "";
         document.getElementById("errType").style.display = "none";
+    }
+    //validate the model 
+    if (document.getElementById("model").value.search(/^[A-Za-z'\-\._ ]{6,}$/) != 0) {
+        valid = false;
+        document.getElementById("errModel").innerHTML = "ERROR: Please your must enter your model!";
+        document.getElementById("errModel").style.display = "inline";
+    } else {
+        document.getElementById("errModel").innerHTML = "";
+        document.getElementById("errModel").style.display = "none";
     }
     //validate the Memory: 
     if (document.getElementById("memoryList").value == "Please select your Memory GB...") {

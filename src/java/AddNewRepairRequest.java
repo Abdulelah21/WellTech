@@ -6,6 +6,11 @@
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -17,20 +22,74 @@ import javax.servlet.http.HttpServletResponse;
  */
 public class AddNewRepairRequest extends HttpServlet {
 
-    /**
-     * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
-     * methods.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
+    
+    
+    
+    
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+            throws ServletException, IOException, SQLException, ClassNotFoundException {
         response.setContentType("text/html;charset=UTF-8");
-        try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
+        
+        PrintWriter out = response.getWriter();
+        try {
+            
+            String ComputerOwner = request.getParameter("Computer_Owner");
+            String ComputerNumber = request.getParameter("Computer_Number");
+            String Type = request.getParameter("typeOfDevice");
+            String Model = request.getParameter("Model");
+            String MemoryGB = request.getParameter("memoryList");
+            int mGB = Integer. parseInt(MemoryGB);
+            String HardDiskGB = request.getParameter("hardDiskList");
+            int hGB = Integer. parseInt(HardDiskGB);
+            String Problems = request.getParameter("Problems");
+            
+            //the connection ...
+            dbConnntion db = new dbConnntion();
+            Connection con = db.getConnection();
+            
+            
+            
+            //INSERT INTO repairs table 
+            String sql = "INSERT INTO repairs (Computer_Owner, Computer_Serial_Number, Type,"
+                    + " Model, Memory_GB, HardDisk_GB, Problems)"
+                    + "Values (?,?,?,?,?,?,?) ";
+            PreparedStatement pStmt = con.prepareStatement(sql);
+            
+             pStmt.setString(1,ComputerOwner );
+             pStmt.setString(2,ComputerNumber );
+             pStmt.setString(3,Type );
+             pStmt.setString(4,Model );
+             pStmt.setInt(5, mGB);
+             pStmt.setInt(6, hGB);
+             pStmt.setString(7,Problems );
+             
+             
+             int k = pStmt.executeUpdate();     // returns number of affected rows 
+
+            if (k == 1) {
+                //insert a record success
+                  request.getRequestDispatcher("/SuccessFullAddRequest.html").forward(request, response);
+                out.println("<p class=\"correct\"> Data was added successfully. </p>");
+            } else // i.e.  k = 0
+            {
+                //insert a record error
+                 request.getRequestDispatcher("/SuccessFullAddRequest.html").forward(request, response);
+                out.println("<p class=\"error\"> There was an error in adding the data! Try again. </p>");
+            }
+             //-----------catch------------
+             con.close();
+        }catch (Exception ex) {
+            //throw new ServletException(ex);
+            out.println("<p class=\"error\"> There was an error exception meesage: " + ex + "</p>");
+            out.println("</div>");
+            out.println("<hr />");
+            out.println("</body>");
+            out.println("</html>");
+        } finally {
+            out.close();
+
+        }
+         /* TODO output your page here. You may use following sample code. */
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
@@ -40,7 +99,8 @@ public class AddNewRepairRequest extends HttpServlet {
             out.println("<h1>Servlet AddNewRepairRequest at " + request.getContextPath() + "</h1>");
             out.println("</body>");
             out.println("</html>");
-        }
+        
+        
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
@@ -55,7 +115,13 @@ public class AddNewRepairRequest extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        try {
+            processRequest(request, response);
+        } catch (SQLException ex) {
+            Logger.getLogger(AddNewRepairRequest.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(AddNewRepairRequest.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     /**
@@ -69,7 +135,13 @@ public class AddNewRepairRequest extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        try {
+            processRequest(request, response);
+        } catch (SQLException ex) {
+            Logger.getLogger(AddNewRepairRequest.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(AddNewRepairRequest.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     /**

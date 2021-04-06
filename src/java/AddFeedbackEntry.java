@@ -66,10 +66,13 @@ public class AddFeedbackEntry extends HttpServlet {
 
             if (k == 1) {
                 //insert a record success
+                
+            request.getRequestDispatcher("/SuccessFullFeedBack.html").forward(request, response);
                 out.println("<p class=\"correct\"> Data was added successfully. </p>");
             } else // i.e.  k = 0
             {
                 //insert a record error
+                request.getRequestDispatcher("/SuccessFullFeedBack.html").forward(request, response);
                 out.println("<p class=\"error\"> There was an error in adding the data! Try again. </p>");
             }
 

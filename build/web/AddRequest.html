@@ -43,19 +43,19 @@
         <div id="addReq">
             <div class="container">
                 <h1>Add New Repair Request</h1>
-                <form id="AddRequest" action="#" method="POST" onsubmit="return validateAddRequest();">
+                <form id="AddRequest" action="AddNewRepairRequest" method="POST" onsubmit="return validateAddRequest();">
                     <div class="container">
                         
                         <label>Computer Owner: </label>
                         <span class="error" id="errName"> </span>
                         <br/>
-                        <input type="text" id="fname" name="name" placeholder="Your name...">
+                        <input type="text" id="fname" name="Computer_Owner" placeholder="Your name...">
                         <br/>
                         <br/>
                         <label>Computer Serial Number: </label>
                         <span class="error" id="errCoputerSerialNumber"> </span>
                         <br/>
-                        <input type="text" id="ComputerNumber" name="ComputerNumber" placeholder="The Serial Number...">
+                        <input type="text" id="ComputerNumber" name="Computer_Number" placeholder="The Serial Number...">
                         <br/>
                         <br/>
                         
@@ -68,9 +68,13 @@
                             <option value="desktop">Desktop</option>
                             <option value="laptop">Labtop</option>
                             <option value="tablet">Tablet</option>
-                           
-                            
                         </select>
+                        <br/>
+                        <br/>
+                        <label>Model: </label>
+                        <span class="error" id="errModel"> </span>
+                        <br/>
+                        <input type="text" id="model" name="Model" placeholder="Your Model...">
                         <br/>
                         <br/>
                         <label>Memory GB: </label>
@@ -79,9 +83,9 @@
                         <select name="memoryList" id="memoryList">
                             
                             <option> Please select your Memory GB... </option>
-                            <option value="fiveGB">5</option>
-                            <option value="SextinGB">16</option>
-                            <option value="thertytwoGB">32</option>
+                            <option>8</option>
+                            <option>16</option>
+                            <option>32</option>
                            
                             
                         </select>
@@ -93,9 +97,9 @@
                         <select name="hardDiskList" id="hardDiskList">
                             
                             <option> Please select your HardDisk GB... </option>
-                            <option value="fiveGB">5</option>
-                            <option value="SextinGB">16</option>
-                            <option value="thertytwoGB">32</option>
+                            <option>5</option>
+                            <option>16</option>
+                            <option>32</option>
                            
                             
                         </select>
@@ -109,7 +113,7 @@
                         <label>Problems: </label>
                         <span class="error" id="errProblems"> </span>
                         <br/>
-                        <textarea id="problemstxt" name="msg" placeholder="Write something.." style="height:200px"></textarea>
+                        <textarea id="problemstxt" name="Problems" placeholder="Write something.." style="height:200px"></textarea>
                         <br/> 
                         <br/>
                         <input id="submit" type="submit" value="Submit">
