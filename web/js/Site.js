@@ -14,10 +14,10 @@ function validateAddRequest() {
         document.getElementById("errName").style.display = "none";
     }
     //Validate the phone field
-    if (document.getElementById("ComputerNumber").value.search(/^[A-Za-z'\-\._ ]{4,}$/) != 0)        //e.g.  0512345678  or   966512345678
+    if (document.getElementById("ComputerNumber").value == "")        
     {
         valid = false;
-        document.getElementById("errCoputerSerialNumber").innerHTML = "ERROR: Computer Serial Number is wrong it must be  digit and 4 letter (SDXX) !";
+        document.getElementById("errCoputerSerialNumber").innerHTML = "ERROR: Please write your Computer Serial Number!";
         document.getElementById("errCoputerSerialNumber").style.display = "inline";
     }
     else {
@@ -25,7 +25,7 @@ function validateAddRequest() {
         document.getElementById("errCoputerSerialNumber").style.display = "none";
     }
     //validate the type: 
-    if (document.getElementById("typeOfDevice").value == "Please select your device") {
+    if (document.getElementById("typeOfDevice").value == "Please select your device...") {
         valid = false;
         document.getElementById("errType").innerHTML = "ERROR : You forgot to select your device type!";
         document.getElementById("errType").style.display = "inline";
@@ -34,7 +34,7 @@ function validateAddRequest() {
         document.getElementById("errType").style.display = "none";
     }
     //validate the model 
-    if (document.getElementById("model").value.search(/^[A-Za-z'\-\._ ]{6,}$/) != 0) {
+    if (document.getElementById("model").value == "") {
         valid = false;
         document.getElementById("errModel").innerHTML = "ERROR: Please your must enter your model!";
         document.getElementById("errModel").style.display = "inline";
