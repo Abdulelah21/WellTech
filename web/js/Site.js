@@ -210,7 +210,7 @@ function validateRegister()
     if (x == "" || x == null || x != y)
     {
         valid = false;
-        document.getElementById("errRegisterConfPassword").innerHTML = "the confirm password and password is not identical";
+        document.getElementById("errRegisterConfPassword").innerHTML = "Both Passwords need to be matched";
         document.getElementById("errRegisterConfPassword").style.display = "inline";
     } else
     {
@@ -220,6 +220,49 @@ function validateRegister()
     }
 
 
+
+
+    if (valid == false)
+    {
+        return false;    // don't submit the form data to the server because of any validation error(s)
+    } else
+    {
+        return true;     // submit the form data to the server because all data looks correct without errors
+    }
+}
+//----------------- login validation ----------------
+function validateLogin()
+{
+    var valid = true;
+    //Validate the name field
+    //if (document.getElementById("name").value.length == 0)
+    var x = document.getElementById("login_name").value;
+    if (x == "" || x == null)
+    {
+        valid = false;
+        document.getElementById("errLoginName").innerHTML = "enter your name please";
+        document.getElementById("errLoginName").style.display = "inline";
+    } else
+    {
+
+        document.getElementById("errLoginName").innerHTML = "";
+        document.getElementById("errLoginName").style.display = "none";
+    }
+
+
+
+    x = document.getElementById("login_password").value;
+    if (x == "" || x == null)
+    {
+        valid = false;
+        document.getElementById("errLoginPassword").innerHTML = "enter your password please";
+        document.getElementById("errLoginPassword").style.display = "inline";
+    } else
+    {
+
+        document.getElementById("errLoginPassword").innerHTML = "";
+        document.getElementById("errLoginPassword").style.display = "none";
+    }
 
 
     if (valid == false)

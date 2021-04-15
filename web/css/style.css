@@ -19,7 +19,7 @@ header{
 header #navbar a{
     text-decoration: none;
     padding: 5px;
-    font-size: 24px;
+    font-size: 20px;
     float: left;
     color: aliceblue;
     margin-left: 20px;
@@ -150,6 +150,7 @@ footer p{
                                 feedback page style  
 --------------------------------------------------------------------------------------------
 */
+
 #helpbox .container{
     
     
@@ -344,8 +345,9 @@ th, td {
     margin-top: 5%;
     margin-left: 38%;
     color: aliceblue;
-    
+    padding-top:10%;
     text-align: center;
+    
     
 }
 
@@ -353,7 +355,7 @@ th, td {
     
     padding-top:20%;
 }
-.login .container #submit{
+.login .container #login_button{
     font-size: 20px;
     height: 35px;
     padding: 0 10px;
@@ -397,12 +399,13 @@ th, td {
     color: aliceblue;
     
     text-align: center;
+    padding-top: 10%;
     
 }
 
 .register .container #registerBox #insideRegisterBox{
     
-    padding-top: 20%;
+    
 }
 .register .container #register_button{
     font-size: 20px;
