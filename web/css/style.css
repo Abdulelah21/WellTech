@@ -328,7 +328,7 @@ th, td {
 }
 
 /*------------------------------------------------------------------------------
-                                Error Message 
+                                Login Page 
 ------------------------------------------------------------------------------*/
 
 .login .container{
@@ -376,5 +376,56 @@ th, td {
 }
 .login .container h1{
     text-align: center;
-    margin-top: 10%;
+    margin-top: 5%;
+}
+/*------------------------------------------------------------------------------
+                                Register Page 
+------------------------------------------------------------------------------*/
+
+.register .container{
+    height: 800px;
+    font-size: 20px;
+    
+}
+.register .container #registerBox{
+    height: 500px;
+    width: 350px;
+    background-color: dimgray;
+    
+    margin-top: 5%;
+    margin-left: 38%;
+    color: aliceblue;
+    
+    text-align: center;
+    
+}
+
+.register .container #registerBox #insideRegisterBox{
+    
+    padding-top: 20%;
+}
+.register .container #register_button{
+    font-size: 20px;
+    height: 35px;
+    padding: 0 10px;
+    border: 1px solid;
+    border-radius: 20px;
+    margin: auto;
+    display: block;
+}
+.register input{
+    
+    margin-bottom: 6px; 
+    margin-top: 6px;
+    padding-top: 10px;
+    /*padding-bottom: 20px;*/
+    font-size: 17px;
+    width: 60%;
+    margin: auto;
+    
+    
+}
+.register .container h1{
+    text-align: center;
+    margin-top: 5%;
 }
