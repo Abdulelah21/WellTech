@@ -14,6 +14,7 @@ header{
     background-color: #393939;
     color: white;
     border-bottom: 10px solid #6B6B6B;
+    
 }
 header #navbar a{
     text-decoration: none;
@@ -23,6 +24,7 @@ header #navbar a{
     color: aliceblue;
     margin-left: 20px;
     margin-top: 20px;
+    
 }
 header li{
     display: inline;
@@ -35,6 +37,7 @@ header li{
     width: 80%;
     margin: auto;
     overflow: hidden;
+    
 }
 
 #logo img{
@@ -44,6 +47,7 @@ header li{
 }
 header #navbar .current a{
     color: #6B6B6B;
+    
 }
 /*
                                     footer style 
@@ -321,4 +325,56 @@ th, td {
 }
 #errName{
     color: #D80000;
+}
+
+/*------------------------------------------------------------------------------
+                                Error Message 
+------------------------------------------------------------------------------*/
+
+.login .container{
+    height: 800px;
+    font-size: 20px;
+    
+}
+.login .container #loginBox{
+    height: 350px;
+    width: 350px;
+    background-color: dimgray;
+    
+    margin-top: 5%;
+    margin-left: 38%;
+    color: aliceblue;
+    
+    text-align: center;
+    
+}
+
+.login .container #loginBox #insideLoginBox{
+    
+    padding-top:20%;
+}
+.login .container #submit{
+    font-size: 20px;
+    height: 35px;
+    padding: 0 10px;
+    border: 1px solid;
+    border-radius: 20px;
+    margin: auto;
+    display: block;
+}
+.login input{
+    
+    margin-bottom: 6px; 
+    margin-top: 6px;
+    padding-top: 10px;
+    /*padding-bottom: 20px;*/
+    font-size: 17px;
+    width: 60%;
+    margin: auto;
+    
+    
+}
+.login .container h1{
+    text-align: center;
+    margin-top: 10%;
 }
