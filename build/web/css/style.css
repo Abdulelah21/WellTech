@@ -14,15 +14,17 @@ header{
     background-color: #393939;
     color: white;
     border-bottom: 10px solid #6B6B6B;
+    
 }
 header #navbar a{
     text-decoration: none;
     padding: 5px;
-    font-size: 24px;
+    font-size: 20px;
     float: left;
     color: aliceblue;
     margin-left: 20px;
     margin-top: 20px;
+    
 }
 header li{
     display: inline;
@@ -35,6 +37,7 @@ header li{
     width: 80%;
     margin: auto;
     overflow: hidden;
+    
 }
 
 #logo img{
@@ -44,6 +47,7 @@ header li{
 }
 header #navbar .current a{
     color: #6B6B6B;
+    
 }
 /*
                                     footer style 
@@ -146,6 +150,7 @@ footer p{
                                 feedback page style  
 --------------------------------------------------------------------------------------------
 */
+
 #helpbox .container{
     
     
@@ -321,4 +326,109 @@ th, td {
 }
 #errName{
     color: #D80000;
+}
+
+/*------------------------------------------------------------------------------
+                                Login Page 
+------------------------------------------------------------------------------*/
+
+.login .container{
+    height: 800px;
+    font-size: 20px;
+    
+}
+.login .container #loginBox{
+    height: 350px;
+    width: 350px;
+    background-color: dimgray;
+    
+    margin-top: 5%;
+    margin-left: 38%;
+    color: aliceblue;
+    padding-top:10%;
+    text-align: center;
+    
+    
+}
+
+.login .container #loginBox #insideLoginBox{
+    
+    padding-top:20%;
+}
+.login .container #login_button{
+    font-size: 20px;
+    height: 35px;
+    padding: 0 10px;
+    border: 1px solid;
+    border-radius: 20px;
+    margin: auto;
+    display: block;
+}
+.login input{
+    
+    margin-bottom: 6px; 
+    margin-top: 6px;
+    padding-top: 10px;
+    /*padding-bottom: 20px;*/
+    font-size: 17px;
+    width: 60%;
+    margin: auto;
+    
+    
+}
+.login .container h1{
+    text-align: center;
+    margin-top: 5%;
+}
+/*------------------------------------------------------------------------------
+                                Register Page 
+------------------------------------------------------------------------------*/
+
+.register .container{
+    height: 800px;
+    font-size: 20px;
+    
+}
+.register .container #registerBox{
+    height: 500px;
+    width: 350px;
+    background-color: dimgray;
+    
+    margin-top: 5%;
+    margin-left: 38%;
+    color: aliceblue;
+    
+    text-align: center;
+    padding-top: 10%;
+    
+}
+
+.register .container #registerBox #insideRegisterBox{
+    
+    
+}
+.register .container #register_button{
+    font-size: 20px;
+    height: 35px;
+    padding: 0 10px;
+    border: 1px solid;
+    border-radius: 20px;
+    margin: auto;
+    display: block;
+}
+.register input{
+    
+    margin-bottom: 6px; 
+    margin-top: 6px;
+    padding-top: 10px;
+    /*padding-bottom: 20px;*/
+    font-size: 17px;
+    width: 60%;
+    margin: auto;
+    
+    
+}
+.register .container h1{
+    text-align: center;
+    margin-top: 5%;
 }

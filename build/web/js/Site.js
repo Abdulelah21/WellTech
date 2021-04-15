@@ -154,3 +154,122 @@ function validateHelpbox() {
         return true;     // submit the form data to the server because all data looks correct without errors
     }
 }
+//----------- register validation --------------
+function validateRegister()
+{
+    var valid = true;
+
+
+    //Validate the name field
+    //if (document.getElementById("name").value.length == 0)
+    var x = document.getElementById("register_name").value.search(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/) == 0;
+    if (x == "" || x == null)
+    {
+        valid = false;
+        document.getElementById("errRegisterUsername").innerHTML = "enter a correct email please";
+        document.getElementById("errRegisterUsername").style.display = "inline";
+    } else
+    {
+
+        document.getElementById("errRegisterUsername").innerHTML = "";
+        document.getElementById("errRegisterUsername").style.display = "none";
+    }
+
+
+    x = document.getElementById("rigester_fullname").value;
+    if (x == "" || x == null)
+    {
+        valid = false;
+        document.getElementById("errRegisterFullname").innerHTML = "enter your fullname please";
+        document.getElementById("errRegisterFullname").style.display = "inline";
+    } else
+    {
+
+        document.getElementById("errRegisterFullname").innerHTML = "";
+        document.getElementById("errRegisterFullname").style.display = "none";
+    }
+
+
+
+    x = document.getElementById("register_password").value;
+    if (x == "" || x == null)
+    {
+        valid = false;
+        document.getElementById("errRegisterPassword").innerHTML = "enter your password please";
+        document.getElementById("errRegisterPassword").style.display = "inline";
+    } else
+    {
+
+        document.getElementById("errRegisterPassword").innerHTML = "";
+        document.getElementById("errRegisterPassword").style.display = "none";
+    }
+
+
+    x = document.getElementById("register_confpassword").value;
+    y = document.getElementById("register_password").value;
+    if (x == "" || x == null || x != y)
+    {
+        valid = false;
+        document.getElementById("errRegisterConfPassword").innerHTML = "Both Passwords need to be matched";
+        document.getElementById("errRegisterConfPassword").style.display = "inline";
+    } else
+    {
+
+        document.getElementById("errRegisterConfPassword").innerHTML = "";
+        document.getElementById("errRegisterConfPassword").style.display = "none";
+    }
+
+
+
+
+    if (valid == false)
+    {
+        return false;    // don't submit the form data to the server because of any validation error(s)
+    } else
+    {
+        return true;     // submit the form data to the server because all data looks correct without errors
+    }
+}
+//----------------- login validation ----------------
+function validateLogin()
+{
+    var valid = true;
+    //Validate the name field
+    //if (document.getElementById("name").value.length == 0)
+    var x = document.getElementById("login_name").value;
+    if (x == "" || x == null)
+    {
+        valid = false;
+        document.getElementById("errLoginName").innerHTML = "enter your name please";
+        document.getElementById("errLoginName").style.display = "inline";
+    } else
+    {
+
+        document.getElementById("errLoginName").innerHTML = "";
+        document.getElementById("errLoginName").style.display = "none";
+    }
+
+
+
+    x = document.getElementById("login_password").value;
+    if (x == "" || x == null)
+    {
+        valid = false;
+        document.getElementById("errLoginPassword").innerHTML = "enter your password please";
+        document.getElementById("errLoginPassword").style.display = "inline";
+    } else
+    {
+
+        document.getElementById("errLoginPassword").innerHTML = "";
+        document.getElementById("errLoginPassword").style.display = "none";
+    }
+
+
+    if (valid == false)
+    {
+        return false;    // don't submit the form data to the server because of any validation error(s)
+    } else
+    {
+        return true;     // submit the form data to the server because all data looks correct without errors
+    }
+}
