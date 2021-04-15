@@ -92,7 +92,7 @@ public class login extends HttpServlet {
                 HttpSession session = request.getSession();
 
                 session.setAttribute("UserName", UserName);
-                request.getRequestDispatcher("/index.html").forward(request, response);
+                request.getRequestDispatcher("/indexLoggedin.html").forward(request, response);
             } else {
                 request.getRequestDispatcher("/login.html").forward(request, response);
             }
