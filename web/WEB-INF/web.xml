@@ -28,6 +28,14 @@
         <servlet-name>servletAddnewRequest</servlet-name>
         <servlet-class>servletAddnewRequest</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>servletIndex</servlet-name>
+        <servlet-class>servletIndex</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>servletFeedback</servlet-name>
+        <servlet-class>servletFeedback</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>AddFeedbackEntry</servlet-name>
         <url-pattern>/AddFeedbackEntry</url-pattern>
@@ -55,6 +63,14 @@
     <servlet-mapping>
         <servlet-name>servletAddnewRequest</servlet-name>
         <url-pattern>/servletAddnewRequest</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>servletIndex</servlet-name>
+        <url-pattern>/servletIndex</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>servletFeedback</servlet-name>
+        <url-pattern>/servletFeedback</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
