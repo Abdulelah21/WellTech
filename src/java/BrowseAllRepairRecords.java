@@ -45,7 +45,7 @@ public class BrowseAllRepairRecords extends HttpServlet {
                         + "    <body  >\n"
                         + "        <header>\n"
                         + "            <div class=\"container\">\n"
-                        + "                <a href=\"index.html\" id=\"logo\">\n"
+                        + "                <a href=\"#\" id=\"logo\">\n"
                         + "                    <img src=\"images/logo.png\">\n"
                         + "\n"
                         + "                </a>\n"
@@ -67,7 +67,7 @@ public class BrowseAllRepairRecords extends HttpServlet {
                         + "\n"
                         + "                        </li>\n"
                         + "                        <li>\n"
-                        + "                        <a href=\"#\">Logout</a>\n"
+                        + "                        <a href=\"logout\">Logout</a>\n"
                         + "                        \n"
                         + "                      </li>\n"                      
                         + "\n"
@@ -158,7 +158,7 @@ public class BrowseAllRepairRecords extends HttpServlet {
                 out.close();
             }
         } else {
-            request.getRequestDispatcher("/login.html").forward(request, response);
+            request.getRequestDispatcher("/ErrAccess.html").forward(request, response);
         }
 
     }
